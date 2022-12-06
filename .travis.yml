@@ -16,8 +16,6 @@ after_success:
   - docker build -t hernandezmdev/multi-worker ./worker
 
   #Log in to the docker CLI
-  - echo $DOCKER_PASSWORD
-  - echo "DOCKER_PASSWORD"
   - echo "$DOCKER_PASSSWORD" | docker login -username "$DOCKER_ID" --password-stdin
 
   - docker push hernandezmdev/multi-client
